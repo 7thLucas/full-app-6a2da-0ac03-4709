@@ -1,0 +1,94 @@
+<style>
+  .mode-landscape .sl-ns-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.75rem; }
+  .mode-portrait .sl-ns-grid { display: flex; flex-direction: column; gap: 1.25rem; }
+</style>
+<section class="w-full h-full overflow-auto bg-white p-10">
+
+  <!-- Header -->
+  <div class="flex items-center justify-between mb-2">
+    <span class="text-xs font-bold tracking-widest uppercase" style="color:#8B5CF6;">North Star</span>
+    <span class="px-3 py-1 rounded-full text-xs font-semibold bg-amber-50 text-amber-800 border border-amber-200">Projected impact — based on your inputs</span>
+  </div>
+  <h2 class="text-3xl font-bold text-slate-900 leading-tight mb-1">Weekly Verified Operations</h2>
+  <p class="text-slate-500 text-sm mb-6">The number Radiance AI lives by: leads converted to booked appointments, every week.</p>
+
+  <div class="sl-ns-grid">
+
+    <!-- Left column: operation definition + WVO formula -->
+    <div class="space-y-3">
+
+      <div class="rounded-xl border border-slate-200 bg-slate-50 p-4">
+        <p class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-2">Verified Operation</p>
+        <p class="text-base font-bold text-slate-900 mb-1">Lead → Booked Appointment</p>
+        <p class="text-xs text-slate-600 leading-relaxed">A lead moves from "New / Contacted" to "Booked" status via the Radiance AI dashboard or an n8n automation workflow — the core revenue-generating event this app exists to perform.</p>
+      </div>
+
+      <div class="rounded-xl border border-violet-200 bg-violet-50 p-4">
+        <p class="text-xs font-semibold text-violet-700 uppercase tracking-wide mb-3">WVO Formula</p>
+        <div class="space-y-1.5 text-xs">
+          <div class="flex items-center justify-between gap-2">
+            <span class="text-slate-700">Active leads / week</span>
+            <span class="px-2 py-0.5 bg-amber-100 text-amber-800 rounded font-medium whitespace-nowrap">Assumption — adjust this</span>
+          </div>
+          <p class="font-mono text-slate-500 pl-2">= 30 leads/month ÷ 4.3 ≈ <strong class="text-slate-700">7 leads/week</strong></p>
+
+          <div class="flex items-center justify-between gap-2 mt-2">
+            <span class="text-slate-700">Booking conversion rate</span>
+            <span class="px-2 py-0.5 bg-amber-100 text-amber-800 rounded font-medium whitespace-nowrap">Assumption — adjust this</span>
+          </div>
+          <p class="font-mono text-slate-500 pl-2">= 30% (industry baseline)</p>
+
+          <div class="mt-3 pt-2 border-t border-violet-200">
+            <p class="font-mono text-violet-900 font-bold text-sm">7 leads/wk × 30% = <span class="text-lg" style="color:#8B5CF6;">~2 bookings / week</span></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Right column: value derivation + annual impact -->
+    <div class="space-y-3">
+
+      <div class="rounded-xl border border-slate-200 bg-white p-4">
+        <p class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-3">Value Per Operation</p>
+        <div class="space-y-2 text-xs">
+          <div class="flex items-center justify-between gap-2">
+            <span class="text-slate-700">Avg treatment value per booking</span>
+            <span class="px-2 py-0.5 bg-amber-100 text-amber-800 rounded font-medium whitespace-nowrap">Assumption — adjust this</span>
+          </div>
+          <p class="font-mono text-slate-500 pl-2">= $200 per booked appointment</p>
+
+          <div class="flex items-center justify-between gap-2 mt-2">
+            <span class="text-slate-700">Automation touchpoints / week</span>
+            <span class="px-2 py-0.5 bg-amber-100 text-amber-800 rounded font-medium whitespace-nowrap">Assumption — adjust this</span>
+          </div>
+          <p class="font-mono text-slate-500 pl-2">= 20 messages × 15 min saved × $20/hr = $100/wk</p>
+        </div>
+      </div>
+
+      <div class="rounded-xl p-5" style="background:linear-gradient(135deg,#8B5CF6,#EC4899);">
+        <p class="text-xs font-bold uppercase tracking-widest mb-3" style="color:rgba(255,255,255,0.7);">Projected Annual Impact</p>
+        <div class="space-y-2">
+          <div class="flex items-baseline justify-between">
+            <span class="text-sm" style="color:rgba(255,255,255,0.85);">Revenue influenced</span>
+            <span class="text-white font-bold text-lg">$20,800 / yr</span>
+          </div>
+          <p class="font-mono text-xs pl-1" style="color:rgba(255,255,255,0.55);">2 bookings/wk × $200 × 52 wks</p>
+
+          <div class="flex items-baseline justify-between mt-1">
+            <span class="text-sm" style="color:rgba(255,255,255,0.85);">Staff time value</span>
+            <span class="text-white font-bold text-lg">$5,200 / yr</span>
+          </div>
+          <p class="font-mono text-xs pl-1" style="color:rgba(255,255,255,0.55);">$100/wk × 52 wks</p>
+
+          <div class="mt-3 pt-3 border-t flex items-baseline justify-between" style="border-color:rgba(255,255,255,0.2);">
+            <span class="text-white font-semibold text-sm">Total projected value</span>
+            <span class="text-white font-black text-2xl">$26,000 / yr</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
